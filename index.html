@@ -382,6 +382,11 @@ form .campos .input-Campo{
         </select>
         </div>
 
+        <div class="input-Campo">
+        <label for="AnoPrimCart">QUAL FOI O ANO, APROXIMADAMENTE, DE SUA 1° CARTEIRA DE PERMISSIONÁRIO:</label>
+        <input type="number" id="AnoPrimCart" name="AnoPrimCart" min="1900" max="2099" placeholder="AAAA" />
+        </div>
+
         </div>
 
         <!-- Endereço residencial -->
@@ -859,6 +864,7 @@ form .campos .input-Campo{
             const dataExp = document.getElementById('dataExp').value;
             const cpf = document.getElementById('cpf').value;
 			const vinculoAbonad = document.getElementById('vinculoAbonad').value;
+			const AnoPrimCart = document.getElementById('AnoPrimCart').value;
 
             // Endereço residencial
             const logradouroResidencial = document.getElementById('logradouroResidencial').value;
@@ -1021,18 +1027,18 @@ offsetY += 5;
 doc.text(`VINCULO COM O ABONADOR: ${vinculoAbonad}` ,offsetX, startY + offsetY);
 // Atualizando a posição y para a próxima linha
 offsetY += 5;
-
+doc.text(`ANO DA 1° CARTEIRA DE PERMISSIONÁRIO: ${AnoPrimCart}` ,offsetX, startY + offsetY);
+offsetY += 5;
 // Adicionando os últimos dados
 
 
 
-
 // ENDEREÇO RESIDENCIAL
-			
-			doc.line(10, 110, 200, 110);
-            doc.text('ENDEREÇO RESIDENCIAL', 75, 99);  // Título posicionado ao lado da imagem
-            doc.line(10, 121, 200, 121);
-            offsetY += 1;
+			offsetY += 5;
+			doc.line(10, 105, 200, 105);
+            doc.text('ENDEREÇO RESIDENCIAL', 75, 110);  // Título posicionado ao lado da imagem
+            doc.line(10, 112, 200, 112);
+            offsetY += 6;
 
 doc.text(`LOGRADOURO: ${logradouroResidencial}` ,offsetX, startY + offsetY);
 doc.text(`NR: ${nrResidencial}` , offsetX + 75, startY + offsetY);
@@ -1046,14 +1052,14 @@ doc.text(`TEL. FIXO: ${tellFixoResidencial}` ,offsetX, startY + offsetY);
 doc.text(`TEL. CELULAR C/DDD: ${tellCelularResidencial}` , offsetX + 111, startY + offsetY);
 offsetY += 5;
 doc.text(`E-MAIL: ${emailResidencial}` , offsetX, startY + offsetY);
-
+offsetY += 5;
 
 // ENDEREÇO COMERCIAL
-			
-            doc.line(10, 134, 200, 134);
+			offsetY += 5;
+            doc.line(10,134, 200, 134);
             doc.text('ENDEREÇO COMERCIAL', 75, 139);  // Título posicionado ao lado da imagem
             doc.line(10, 141, 200, 141);
-            offsetY += 1;
+            offsetY += 6;
 
 doc.text(`NOME DA EMPRESA: ${nomeEmpresaComercial}` ,offsetX, startY + offsetY);
 offsetY += 5;
@@ -1069,25 +1075,27 @@ doc.text(`TEL. FIXO: ${tellFixoComercial}` ,offsetX, startY + offsetY);
 doc.text(`TEL. CELULAR C/DDD: ${tellCelularComercial}` , offsetX + 50, startY + offsetY);
 offsetY += 5;
 doc.text(`E-MAIL: ${emailComercial}` , offsetX, startY + offsetY);
+offsetY += 5;
 
 // INFORMAÇÕES DO ABONADOR
 
+offsetY += 5;
 doc.line(10, 170, 200, 170); // Desenha uma linha horizontal de (10, 57) a (200, 57)
             doc.text('INFORMAÇÕES DO ABONADOR', 75, 175);  // Título posicionado ao lado da imagem
             doc.line(10, 177, 200, 177); // Desenha uma linha horizontal de (10, 57) a (200, 57)
-            offsetY += 16;
+            offsetY += 6;
 
             doc.text(`NOME DO ABONADOR: ${nomeAbonador}` ,offsetX, startY + offsetY);
             offsetY += 5;
             doc.text(`POST/GRAD: ${postoGradAbonador}` , offsetX, startY + offsetY);
             doc.text(`OM: ${omAbonador}` , offsetX + 120, startY + offsetY);
-
+offsetY += 5;
 // ENDEREÇO RESIDENCIAL ABONADOR
 
-doc.line(10, 181, 200, 181); // Desenha uma linha horizontal de (10, 57) a (200, 57)
+/* doc.line(10, 181, 200, 181); // Desenha uma linha horizontal de (10, 57) a (200, 57)
             doc.text('CONTATO DO ABONADOR', 75, 190);  // Título posicionado ao lado da imagem
             doc.line(10, 188, 200, 188); // Desenha uma linha horizontal de (10, 57) a (200, 57)
-            offsetY += 16;
+            offsetY += 16; */
 
 // doc.text(`LOGRADOURO: ${logradouroAbonador}` ,offsetX, startY + offsetY);
 // doc.text(`NR: ${nrAbonador}` , offsetX + 75, startY + offsetY);
@@ -1100,9 +1108,9 @@ doc.text(`TEL. FIXO: ${tellFixoAbonador}` ,offsetX, startY + offsetY);
 doc.text(`TEL. CELULAR C/DDD: ${tellCelularAbonador}` , offsetX + 45, startY + offsetY);
 offsetY += 5;
 doc.text(`E-MAIL: ${emailAbonador}` , offsetX, startY + offsetY);
-offsetY += 10;
+offsetY += 20;
 
-doc.line(10, 212, 200, 212);
+doc.line(10, 202, 200, 202);
 
 // MOTIVO DE CONCESSÃO
 
@@ -1111,6 +1119,7 @@ offsetY += 5; */
 
 doc.line(140, 235, 70, 235);
 doc.text('ASSINATURA DO ABONADOR', 75, 240);
+
 
     // Adicionando a data da ficha
     doc.setFontSize(12);
@@ -1123,8 +1132,9 @@ doc.addPage();
 doc.line(10, 5, 200, 5);
 doc.text('DADOS DO DEPENDENTE 1', 75, 10);
 doc.line(10, 12, 200, 12);
-offsetY += 8;
+ offsetY += 1;
 
+offsetY += 14;
 doc.text(`NOME: ${nomeDependenteUm}`, offsetX, startY + -215 + offsetY);
 
 offsetY += 5;
