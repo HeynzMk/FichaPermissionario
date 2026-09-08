@@ -1083,10 +1083,10 @@ doc.line(10, 160, 200, 160); // Desenha uma linha horizontal de (10, 57) a (200,
 			doc.text(`VINCULO COM O ABONADOR: ${vinculoAbonad}` ,offsetX, startY + offsetY);
 
 // ENDEREÇO RESIDENCIAL ABONADOR
-
-doc.line(10, 198, 200, 198); // Desenha uma linha horizontal de (10, 57) a (200, 57)
+offsetY += 5;
+doc.line(10, 181, 200, 181); // Desenha uma linha horizontal de (10, 57) a (200, 57)
             doc.text('CONTATO DO ABONADOR', 75, 190);  // Título posicionado ao lado da imagem
-            doc.line(10, 208, 200, 208); // Desenha uma linha horizontal de (10, 57) a (200, 57)
+            doc.line(10, 188, 200, 188); // Desenha uma linha horizontal de (10, 57) a (200, 57)
             offsetY += 16;
 
 // doc.text(`LOGRADOURO: ${logradouroAbonador}` ,offsetX, startY + offsetY);
@@ -1096,7 +1096,6 @@ doc.line(10, 198, 200, 198); // Desenha uma linha horizontal de (10, 57) a (200,
 // doc.text(`BAIRRO: ${bairroAbonador}` ,offsetX, startY + offsetY);
 // doc.text(`UF: ${ufAbonador}` , offsetX + 85, startY + offsetY);
 // doc.text(`CIDADE: ${cidadeAbonador}` , offsetX + 105, startY + offsetY);
-offsetY += 5;
 doc.text(`TEL. FIXO: ${tellFixoAbonador}` ,offsetX, startY + offsetY);
 doc.text(`TEL. CELULAR C/DDD: ${tellCelularAbonador}` , offsetX + 45, startY + offsetY);
 offsetY += 5;
