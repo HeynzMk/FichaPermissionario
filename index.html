@@ -1026,7 +1026,7 @@ offsetY += 5;
 
 
 // ENDEREÇO RESIDENCIAL
-			offsetY += 5;
+			
 			doc.line(10, 94, 200, 94);
             doc.text('ENDEREÇO RESIDENCIAL', 75, 99);  // Título posicionado ao lado da imagem
             doc.line(10, 101, 200, 101);
@@ -1047,10 +1047,10 @@ doc.text(`E-MAIL: ${emailResidencial}` , offsetX, startY + offsetY);
 
 
 // ENDEREÇO COMERCIAL
-			offsetY += 5;
-            doc.line(10, 124, 200, 124);
-            doc.text('ENDEREÇO COMERCIAL', 75, 129);  // Título posicionado ao lado da imagem
-            doc.line(10, 131, 200, 131);
+			
+            doc.line(10, 134, 200, 134);
+            doc.text('ENDEREÇO COMERCIAL', 75, 139);  // Título posicionado ao lado da imagem
+            doc.line(10, 141, 200, 141);
             offsetY += 15;
 
 doc.text(`NOME DA EMPRESA: ${nomeEmpresaComercial}` ,offsetX, startY + offsetY);
@@ -1069,10 +1069,10 @@ offsetY += 5;
 doc.text(`E-MAIL: ${emailComercial}` , offsetX, startY + offsetY);
 
 // INFORMAÇÕES DO ABONADOR
-offsetY += 5;
-doc.line(10, 160, 200, 160); // Desenha uma linha horizontal de (10, 57) a (200, 57)
-            doc.text('INFORMAÇÕES DO ABONADOR', 75, 165);  // Título posicionado ao lado da imagem
-            doc.line(10, 167, 200, 167); // Desenha uma linha horizontal de (10, 57) a (200, 57)
+
+doc.line(10, 170, 200, 170); // Desenha uma linha horizontal de (10, 57) a (200, 57)
+            doc.text('INFORMAÇÕES DO ABONADOR', 75, 175);  // Título posicionado ao lado da imagem
+            doc.line(10, 177, 200, 177); // Desenha uma linha horizontal de (10, 57) a (200, 57)
             offsetY += 16;
 
             doc.text(`NOME DO ABONADOR: ${nomeAbonador}` ,offsetX, startY + offsetY);
@@ -1083,7 +1083,7 @@ doc.line(10, 160, 200, 160); // Desenha uma linha horizontal de (10, 57) a (200,
 			doc.text(`VINCULO COM O ABONADOR: ${vinculoAbonad}` ,offsetX, startY + offsetY);
 
 // ENDEREÇO RESIDENCIAL ABONADOR
-offsetY += 5;
+
 doc.line(10, 181, 200, 181); // Desenha uma linha horizontal de (10, 57) a (200, 57)
             doc.text('CONTATO DO ABONADOR', 75, 190);  // Título posicionado ao lado da imagem
             doc.line(10, 188, 200, 188); // Desenha uma linha horizontal de (10, 57) a (200, 57)
