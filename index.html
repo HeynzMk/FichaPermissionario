@@ -570,10 +570,10 @@ form .campos .input-Campo{
          </div>
          <!-- MOTIVO DA CONCESSÃO -->
 
-        <div class="inputt-CampoMot">
+       <!--  <div class="inputt-CampoMot">
          <label for="motivoConcessao">MOTIVO DA CONCESSÃO</label>
          <input class="motivoconcessao" type="text" id="motivoConcessao" name="motivoConcessao" oninput="this.value = this.value.toUpperCase()" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required>
-        </div>
+        </div> -->
 
 
          <!-- Dependentes -->
@@ -811,7 +811,7 @@ form .campos .input-Campo{
 
             &emsp;
         <button class="gerarPdfBtn" type="button" onclick="gerarPDF()">Gerar PDF</button> &emsp;&emsp;
-        <button class="butaoGov"><a class="assin-link" href="https://www.gov.br/pt-br">GovBr</a></button> &emsp;&emsp;
+        <!-- <button class="butaoGov"><a class="assin-link" href="https://www.gov.br/pt-br">GovBr</a></button> &emsp;&emsp; -->
         <button type="reset" class="gerarPdfBtn">Reset</button>
             <br><br>
       </form>
@@ -892,7 +892,7 @@ form .campos .input-Campo{
 
             // MOTIVO DE CONCESSÃO
 
-            const motivoConcessao = document.getElementById('motivoConcessao').value;
+            /* const motivoConcessao = document.getElementById('motivoConcessao').value; */
 
             // DEPENDENTE NUMERO UM (1)
 
@@ -1093,10 +1093,10 @@ doc.line(10, 212, 200, 212);
 
 // MOTIVO DE CONCESSÃO
 
-doc.text(`MOTIVO DA CONCESSÃO: ${motivoConcessao}` , offsetX, startY + offsetY);
-offsetY += 5;
+/* doc.text(`MOTIVO DA CONCESSÃO: ${motivoConcessao}` , offsetX, startY + offsetY);
+offsetY += 5; */
 
-doc.line(140, 235, 70, 235);
+/* doc.line(140, 235, 70, 235); */
 doc.text('ASSINATURA DO ABONADOR', 75, 240);
 
     // Adicionando a data da ficha
