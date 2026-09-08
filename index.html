@@ -371,6 +371,17 @@ form .campos .input-Campo{
         <input id="cpf" type="text"  name="cpf" oninput="this.value = this.value.toUpperCase()" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required>
         </div>
 
+			<div class="input-Campo">
+        <label for="vinculoAbonad">VINCULO COM O ABONADOR:</label>
+        <select name="vinculoAbonad" id="vinculoAbonad" required>
+            <option value="X">ESCOLHA UMA OPÇÃO</option>
+            <option value="FAMILIAR">FAMILIAR</option>
+            <option value="AMIGO">AMIGO</option>
+            <option value="INDICAÇÃO DE UM AMIGO">INDICAÇÃO DE UM AMIGO</option>
+            <option value="NÃO CONHEÇO O ABONADOR">NÃO CONHEÇO O ABONADOR</option>
+        </select>
+        </div>
+
         </div>
 
         <!-- Endereço residencial -->
@@ -510,17 +521,6 @@ form .campos .input-Campo{
         <div class="input-Campo">
          <label for="omAbonador">OM</label>
          <input type="text" id="omAbonador" name="omAbonador" required>
-        </div>
-
-		<div class="input-Campo">
-        <label for="vinculoAbonad">VINCULO COM O ABONADOR:</label>
-        <select name="vinculoAbonad" id="vinculoAbonad" required>
-            <option value="X">ESCOLHA UMA OPÇÃO</option>
-            <option value="FAMILIAR">FAMILIAR</option>
-            <option value="AMIGO">AMIGO</option>
-            <option value="INDICAÇÃO DE UM AMIGO">INDICAÇÃO DE UM AMIGO</option>
-            <option value="NÃO CONHEÇO O ABONADOR">NÃO CONHEÇO O ABONADOR</option>
-        </select>
         </div>
 
          </div>
@@ -858,6 +858,7 @@ form .campos .input-Campo{
             const orgExp = document.getElementById('orgExp').value;
             const dataExp = document.getElementById('dataExp').value;
             const cpf = document.getElementById('cpf').value;
+			const vinculoAbonad = document.getElementById('vinculoAbonad').value;
 
             // Endereço residencial
             const logradouroResidencial = document.getElementById('logradouroResidencial').value;
@@ -888,7 +889,6 @@ form .campos .input-Campo{
             const nomeAbonador = document.getElementById('nomeAbonador').value;
             const postoGradAbonador = document.getElementById('postoGradAbonador').value;
             const omAbonador = document.getElementById('omAbonador').value;
-			const vinculoAbonad = document.getElementById('vinculoAbonad').value;
 
             // ENDEREÇO RESIDENCIAL ABONADOR
 
@@ -1017,6 +1017,8 @@ offsetY += 5;
 doc.text(`NR IDENTIDADE: ${nrIdentidade}`, offsetX, startY + offsetY);
 doc.text(`ÓRG EXP: ${orgExp}`, offsetX + 80, startY + offsetY);
 doc.text(`DATA EXP: ${dataExp}`, offsetX + 145, startY + offsetY);
+offsetY += 5;
+doc.text(`VINCULO COM O ABONADOR: ${vinculoAbonad}` ,offsetX, startY + offsetY);
 // Atualizando a posição y para a próxima linha
 offsetY += 5;
 
@@ -1051,7 +1053,7 @@ doc.text(`E-MAIL: ${emailResidencial}` , offsetX, startY + offsetY);
             doc.line(10, 134, 200, 134);
             doc.text('ENDEREÇO COMERCIAL', 75, 139);  // Título posicionado ao lado da imagem
             doc.line(10, 141, 200, 141);
-            offsetY += 15;
+            offsetY += 1;
 
 doc.text(`NOME DA EMPRESA: ${nomeEmpresaComercial}` ,offsetX, startY + offsetY);
 offsetY += 5;
@@ -1079,8 +1081,6 @@ doc.line(10, 170, 200, 170); // Desenha uma linha horizontal de (10, 57) a (200,
             offsetY += 5;
             doc.text(`POST/GRAD: ${postoGradAbonador}` , offsetX, startY + offsetY);
             doc.text(`OM: ${omAbonador}` , offsetX + 120, startY + offsetY);
-			offsetY += 5;
-			doc.text(`VINCULO COM O ABONADOR: ${vinculoAbonad}` ,offsetX, startY + offsetY);
 
 // ENDEREÇO RESIDENCIAL ABONADOR
 
