@@ -512,13 +512,24 @@ form .campos .input-Campo{
          <input type="text" id="omAbonador" name="omAbonador" required>
         </div>
 
+		<div class="input-Campo">
+        <label for="vinculoAbonad">VINCULO COM O ABONADOR:</label>
+        <select name="vinculoAbonad" id="vinculoAbonad" required>
+            <option value="X">ESCOLHA UMA OPÇÃO</option>
+            <option value="FAMILIAR">FAMILIAR</option>
+            <option value="AMIGO">AMIGO</option>
+            <option value="INDICAÇÃO DE UM AMIGO">INDICAÇÃO DE UM AMIGO</option>
+            <option value="NÃO CONHEÇO O ABONADOR">NÃO CONHEÇO O ABONADOR</option>
+        </select>
+        </div>
+
          </div>
 
          <!-- Endereço Residencial Abonador -->
           
          <div class="formUm">
          <div class="detalhesPessoais">
-         <span class="title">ENDEREÇO RESIDENCIAL</span>
+         <span class="title">CONTATO DO ABONADOR</span>
  
          <div class="campos">
          
@@ -877,6 +888,7 @@ form .campos .input-Campo{
             const nomeAbonador = document.getElementById('nomeAbonador').value;
             const postoGradAbonador = document.getElementById('postoGradAbonador').value;
             const omAbonador = document.getElementById('omAbonador').value;
+			const vinculoAbonad = document.getElementById('vinculoAbonad').value;
 
             // ENDEREÇO RESIDENCIAL ABONADOR
 
@@ -1067,11 +1079,12 @@ doc.line(10, 160, 200, 160); // Desenha uma linha horizontal de (10, 57) a (200,
             offsetY += 5;
             doc.text(`POST/GRAD: ${postoGradAbonador}` , offsetX, startY + offsetY);
             doc.text(`OM: ${omAbonador}` , offsetX + 120, startY + offsetY);
+			doc.text(`VINCULO COM O ABONADOR: ${vinculoAbonad}` ,offsetX, startY + offsetY);
 
 // ENDEREÇO RESIDENCIAL ABONADOR
 
 doc.line(10, 181, 200, 181); // Desenha uma linha horizontal de (10, 57) a (200, 57)
-            doc.text('ENDEREÇO RESIDENCIAL', 75, 186);  // Título posicionado ao lado da imagem
+            doc.text('CONTATO DO ABONADOR', 75, 186);  // Título posicionado ao lado da imagem
             doc.line(10, 188, 200, 188); // Desenha uma linha horizontal de (10, 57) a (200, 57)
             offsetY += 16;
 
