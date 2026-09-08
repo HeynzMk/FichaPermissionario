@@ -1047,7 +1047,7 @@ doc.text(`E-MAIL: ${emailResidencial}` , offsetX, startY + offsetY);
 
 
 // ENDEREÇO COMERCIAL
-
+			offsetY += 5;
             doc.line(10, 124, 200, 124);
             doc.text('ENDEREÇO COMERCIAL', 75, 129);  // Título posicionado ao lado da imagem
             doc.line(10, 131, 200, 131);
@@ -1069,7 +1069,7 @@ offsetY += 5;
 doc.text(`E-MAIL: ${emailComercial}` , offsetX, startY + offsetY);
 
 // INFORMAÇÕES DO ABONADOR
-
+offsetY += 5;
 doc.line(10, 160, 200, 160); // Desenha uma linha horizontal de (10, 57) a (200, 57)
             doc.text('INFORMAÇÕES DO ABONADOR', 75, 165);  // Título posicionado ao lado da imagem
             doc.line(10, 167, 200, 167); // Desenha uma linha horizontal de (10, 57) a (200, 57)
