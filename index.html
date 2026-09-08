@@ -522,35 +522,35 @@ form .campos .input-Campo{
  
          <div class="campos">
          
-        <div class="input-Campo">
+        <!-- <div class="input-Campo">
          <label for="logradouroAbonador">LOGRADOURO</label>
          <input type="text" id="logradouroAbonador" name="logradouroAbonador" oninput="this.value = this.value.toUpperCase()" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required>
-        </div>
+        </div> -->
 
-        <div class="input-Campo">
+        <!-- <div class="input-Campo">
          <label for="nrAbonador">NR</label>
          <input type="text" id="nrAbonador" name="nrAbonador" oninput="this.value = this.value.toUpperCase()" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required>
-        </div>
+        </div> -->
 
-        <div class="input-Campo">
+        <!-- <div class="input-Campo">
          <label for="complementoAbonador">COMPLEMENTO</label>
          <input type="text" id="complementoAbonador" name="complementoAbonador" oninput="this.value = this.value.toUpperCase()" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required>
-        </div>
+        </div> -->
 
-        <div class="input-Campo">
+        <!-- <div class="input-Campo">
          <label for="bairroAbonador">BAIRRO</label>
          <input type="text" id="bairroAbonador" name="bairroAbonador" oninput="this.value = this.value.toUpperCase()" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required>
-        </div>
+        </div> -->
          
-        <div class="input-Campo">
+        <!-- <div class="input-Campo">
          <label for="cidadeAbonador">CIDADE</label>
          <input type="text" id="cidadeAbonador" name="cidadeAbonador" oninput="this.value = this.value.toUpperCase()" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required>
-        </div>
+        </div> -->
 
-        <div class="input-Campo">
+        <!-- <div class="input-Campo">
          <label for="ufAbonador">UF</label>
          <input type="text" id="ufAbonador" name="ufAbonador" oninput="this.value = this.value.toUpperCase()" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required>
-        </div>
+        </div> -->
 
         <div class="input-Campo">
          <label for="tellFixoAbonador">TEL. FIXO</label>
@@ -880,12 +880,12 @@ form .campos .input-Campo{
 
             // ENDEREÇO RESIDENCIAL ABONADOR
 
-            const logradouroAbonador = document.getElementById('logradouroAbonador').value;
-            const nrAbonador = document.getElementById('nrAbonador').value;
-            const complementoAbonador = document.getElementById('complementoAbonador').value;
-            const bairroAbonador = document.getElementById('bairroAbonador').value;
-            const cidadeAbonador = document.getElementById('cidadeAbonador').value;
-            const ufAbonador = document.getElementById('ufAbonador').value;
+            // const logradouroAbonador = document.getElementById('logradouroAbonador').value;
+            // const nrAbonador = document.getElementById('nrAbonador').value;
+            // const complementoAbonador = document.getElementById('complementoAbonador').value;
+            // const bairroAbonador = document.getElementById('bairroAbonador').value;
+            // const cidadeAbonador = document.getElementById('cidadeAbonador').value;
+            // const ufAbonador = document.getElementById('ufAbonador').value;
             const tellFixoAbonador = document.getElementById('tellFixoAbonador').value;
             const tellCelularAbonador = document.getElementById('tellCelularAbonador').value;
             const emailAbonador = document.getElementById('emailAbonador').value;
@@ -1075,13 +1075,13 @@ doc.line(10, 181, 200, 181); // Desenha uma linha horizontal de (10, 57) a (200,
             doc.line(10, 188, 200, 188); // Desenha uma linha horizontal de (10, 57) a (200, 57)
             offsetY += 16;
 
-doc.text(`LOGRADOURO: ${logradouroAbonador}` ,offsetX, startY + offsetY);
-doc.text(`NR: ${nrAbonador}` , offsetX + 75, startY + offsetY);
-doc.text(`COMPLEMENTO: ${complementoAbonador}` , offsetX + 100, startY + offsetY);
-offsetY += 5;
-doc.text(`BAIRRO: ${bairroAbonador}` ,offsetX, startY + offsetY);
-doc.text(`UF: ${ufAbonador}` , offsetX + 85, startY + offsetY);
-doc.text(`CIDADE: ${cidadeAbonador}` , offsetX + 105, startY + offsetY);
+// doc.text(`LOGRADOURO: ${logradouroAbonador}` ,offsetX, startY + offsetY);
+// doc.text(`NR: ${nrAbonador}` , offsetX + 75, startY + offsetY);
+// doc.text(`COMPLEMENTO: ${complementoAbonador}` , offsetX + 100, startY + offsetY);
+// offsetY += 5;
+// doc.text(`BAIRRO: ${bairroAbonador}` ,offsetX, startY + offsetY);
+// doc.text(`UF: ${ufAbonador}` , offsetX + 85, startY + offsetY);
+// doc.text(`CIDADE: ${cidadeAbonador}` , offsetX + 105, startY + offsetY);
 offsetY += 5;
 doc.text(`TEL. FIXO: ${tellFixoAbonador}` ,offsetX, startY + offsetY);
 doc.text(`TEL. CELULAR C/DDD: ${tellCelularAbonador}` , offsetX + 45, startY + offsetY);
